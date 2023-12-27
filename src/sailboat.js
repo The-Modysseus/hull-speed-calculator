@@ -1,7 +1,9 @@
 export default function Sailboat() {
+    // Private member variables
     var _name;
     var _length;
 
+    // Properties
     Object.defineProperty(this, 'name', {
         get: function() { return _name; },
         set: function(name) { _name = name; }
@@ -13,7 +15,7 @@ export default function Sailboat() {
     });
 
     // Member functions
-    this.hullspeed = function() {
+    this.GetHullSpeed = function() {
         return 1.34 * Math.sqrt(this.length);
     };
 }
